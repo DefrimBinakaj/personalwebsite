@@ -20,7 +20,7 @@ a {
   -webkit-text-decoration-skip: objects; 
   text-decoration: none;
   color: rgba(245, 245, 245, .8);
-  z-index: -9999;
+  /* z-index: -9999; */
 }
 
 * {
@@ -129,13 +129,13 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
 
 .rightMain .defPic {
   display: block;
-  width: 410px;
+  width: 350px;
   border-radius: 6px; 
 }
 
 @media (min-width: 300px) and (max-width: 1000px) {
   .rightMain .defPic {
-    max-width: 410px;
+    max-width: 350px;
     width: 80%;
     margin: auto;
     text-align: center;
@@ -502,6 +502,102 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
 
 
 
+/* labour of love ------------------------------------------------------------------------------------------------------------------ */
+.labourSection {
+  background-color: #202020; /* Dark grey background */
+  padding: 60px;
+}
+
+/* Row container */
+.labourRowTop,
+.labourRowBottom {
+  display: flex;
+  align-items: center;  /* Vertically center content */
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto 40px auto;
+}
+
+/* Top row: Adjustable width percentages */
+.colTopText {
+  flex: 1 1 45%; /* Change this to adjust text width */
+  padding: 20px;
+}
+
+.colTopImage {
+  flex: 1 1 55%; /* Change this to adjust image width */
+  padding: 20px;
+}
+
+/* Bottom row: Adjustable width percentages */
+.colImage {
+  flex: 1 1 70%;
+  padding: 20px; /* Change this to adjust image width */
+}
+
+.colList {
+  flex: 1 1 30%;
+  padding: 20px; /* Change this to adjust list width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers list items */
+}
+
+/* Paragraph styling */
+.colTopText p {
+  font-family: "Khula", sans-serif;
+  line-height: 26px;
+  font-size: 18px;
+  text-rendering: optimizeLegibility;
+  text-align: left;
+  margin: 0;
+}
+
+/* Image styling */
+.colTopImage img,
+.colImage img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Ensure the entire <li> content is aligned */
+.labourList li {
+  display: flex;
+  align-items: center; /* Vertically center image & text */
+  margin-bottom: 15px;
+}
+
+/* Ensure the <a> wraps the whole row */
+.labourList li a {
+  display: flex;
+  align-items: center; /* Keep text aligned with the image */
+  text-decoration: none; /* Remove default underline */
+  color: rgba(245, 245, 245, 0.8);
+  width: 100%;
+}
+
+/* Fix the image size */
+.labourList li img {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  border-radius: 6px;
+  object-fit: contain; /* Ensure image is well-fitted */
+}
+
+/* Ensure text is aligned properly */
+.labourList li span {
+  font-size: 18px;
+  display: flex;
+  align-items: center; /* Aligns text with the image */
+}
+
+/* end labouroflove */
+
+
+
+
+
 
 
 
@@ -579,7 +675,7 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
 .stackTitle .underLine {
   position: absolute;
   width: 90px;
-  border-bottom: 3px solid rgb(200, 184, 139);
+  border-bottom: 3px solid rgb(200, 183, 137);
   left: calc(50% - 45px);
   margin-bottom: 80px;
 }
@@ -737,8 +833,9 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
   float: left; 
   direction: ltr; 
   position: relative; 
-  left: -105px;
-  top: -10px;
+  left: -115px;
+  top: 10px;
+  cursor: pointer;
 }
 .timelinePicRight {
   width: 60px; 
@@ -746,8 +843,9 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
   float: right; 
   direction: ltr; 
   position: relative; 
-  right: -105px;
-  top: -10px;
+  right: -115px;
+  top: 10px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
